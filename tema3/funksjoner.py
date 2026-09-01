@@ -1,0 +1,3 @@
+def funksjon ():
+    pass
+
