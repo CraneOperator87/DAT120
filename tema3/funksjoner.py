@@ -1,3 +1,7 @@
-def funksjon ():
-    pass
+def funksjon (parameter):
+    parameter += 10
+    return parameter
+
+
+print(funksjon)
 
