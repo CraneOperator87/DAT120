@@ -1,0 +1,10 @@
+# Brønnhodetrykk – testsekvens
+145.2 bar
+14.9 MPa
+  152,0 bar
+kommentar: vedlikehold
+15.10MPa
+149.8
+# sensor B:
+151.3 Bar
+1.6 mPa
