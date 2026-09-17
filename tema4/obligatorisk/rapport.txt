@@ -1,0 +1,5 @@
+Antall gyldige målinger: 5
+Sum: 747.3
+Minimum: 145.2
+Maksimum: 152.0
+Gjennomsnitt: 149.46

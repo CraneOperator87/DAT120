@@ -1,0 +1,13 @@
+Linje 1: # Brønnhodetrykk – testsekvens - kommentar
+Linje 5: kommentar: vedlikehold - ugyldig tall
+Linje 6: 15.10MPa - ugyldig tall
+Linje 7: 149.8 - ingen enhet, antatt bar
+Linje 8: # sensor B: - kommentar
+Linje 10: 1.6 mPa - ikke støttet enhet
+
+Antall gyldige målinger: 5
+Antall linjer ignorert: 2
+Antall linjer med feil: 3
+Minimum: 145.2
+Maksimum: 152.0
+Gjennomsnitt: 149.46
