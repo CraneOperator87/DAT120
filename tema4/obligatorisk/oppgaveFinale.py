@@ -1,6 +1,9 @@
-# Leser inputfilen og logger feil
-with open("tema4/obligatorisk/bronntrykk.txt", "r", encoding="utf-8") as input_fil:
-    linjer = input_fil.readlines()
+# Leser inputfilen og logger feil : Avslutter programmet 
+try:
+    with open("tema4/obligatorisk/bronntrykk.txt", "r", encoding="utf-8") as input_fil:
+        linjer = input_fil.readlines()
+except FileNotFoundError:
+    raise SystemExit("Finner ikke inputfilen.")
 
 logg_tekster = []
 ignorerte_linjer = 0
@@ -73,6 +76,13 @@ for linje_nr, linje in enumerate(linjer, start=1):
     if max_verdi is None or verdi_bar > max_verdi:
         max_verdi = verdi_bar
 
+
+if min_verdi is None: minimum = 0
+else: minimum = min_verdi
+
+if max_verdi is None: maksimum = 0
+else: maksimum = max_verdi
+
 # 6. Gjennomsnitt
 if gyldige_antall > 0:
     gjennomsnitt = total / gyldige_antall
@@ -83,8 +93,8 @@ else:
 with open("tema4/obligatorisk/rapport.txt", "w", encoding="utf-8") as rapport_fil:
     rapport_fil.write(f"Antall gyldige målinger: {gyldige_antall}\n")
     rapport_fil.write(f"Sum: {total}\n")
-    rapport_fil.write(f"Minimum: {min_verdi if min_verdi is not None else 0}\n")
-    rapport_fil.write(f"Maksimum: {max_verdi if max_verdi is not None else 0}\n")
+    rapport_fil.write(f"Minimum: {minimum:.2f}\n")
+    rapport_fil.write(f"Maksimum: {maksimum:.2f}\n")
     rapport_fil.write(f"Gjennomsnitt: {gjennomsnitt:.2f}\n")
 
 # 8. Skriv logg.txt
@@ -95,14 +105,14 @@ with open("tema4/obligatorisk/logg.txt", "w", encoding="utf-8") as logg_fil:
     logg_fil.write(f"\nAntall gyldige målinger: {gyldige_antall}\n")
     logg_fil.write(f"Antall linjer ignorert: {ignorerte_linjer}\n")
     logg_fil.write(f"Antall linjer med feil: {feil_antall}\n")
-    logg_fil.write(f"Minimum: {min_verdi if min_verdi is not None else 0}\n")
-    logg_fil.write(f"Maksimum: {max_verdi if max_verdi is not None else 0}\n")
+    logg_fil.write(f"Minimum: {minimum:.2f}\n")
+    logg_fil.write(f"Maksimum: {maksimum:.2f}\n")
     logg_fil.write(f"Gjennomsnitt: {gjennomsnitt:.2f}\n")
 
 print("Programmet er ferdig.")
 print(f"Gyldige målinger: {gyldige_antall}")
 print(f"Feil: {feil_antall}")
 print(f"Ignorerte linjer: {ignorerte_linjer}")
-print(f"Minimum: {min_verdi if min_verdi is not None else 0}")
-print(f"Maksimum: {max_verdi if max_verdi is not None else 0}")
+print(f"Minimum: {minimum:.2f}")
+print(f"Maksimum: {maksimum:.2f}")
 print(f"Gjennomsnitt: {gjennomsnitt:.2f}")

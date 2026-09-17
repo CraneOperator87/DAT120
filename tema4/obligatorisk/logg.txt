@@ -8,6 +8,6 @@ Linje 10: 1.6 mPa - ikke støttet enhet
 Antall gyldige målinger: 5
 Antall linjer ignorert: 2
 Antall linjer med feil: 3
-Minimum: 145.2
-Maksimum: 152.0
+Minimum: 145.20
+Maksimum: 152.00
 Gjennomsnitt: 149.46
