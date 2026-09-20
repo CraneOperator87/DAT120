@@ -13,7 +13,7 @@ total = 0
 min_verdi = None
 max_verdi = None
 
-for linje_nr, linje in enumerate(linjer, start=1):
+for linje_nr, linje in enumerate(linjer, start=1): 
     linje = linje.strip()
 
     # 1. Ignorer tom linjer
@@ -116,3 +116,4 @@ print(f"Ignorerte linjer: {ignorerte_linjer}")
 print(f"Minimum: {minimum:.2f}")
 print(f"Maksimum: {maksimum:.2f}")
 print(f"Gjennomsnitt: {gjennomsnitt:.2f}")
+
