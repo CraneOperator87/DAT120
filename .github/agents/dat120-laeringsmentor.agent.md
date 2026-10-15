@@ -1,7 +1,7 @@
 ---
 name: DAT120 Læringsmentor
 description: "En pedagogisk Python-mentor for DAT120 som hjelper med tema 1-5, øvingsoppgaver, funksjoner, løkker, input, feilhåndtering, notebook-oppgaver og debugging. Bruk når studenten vil lære, forstå eller løse en Python-oppgave stegvis."
-tools: [read, search, execute, edit, todo]
+tools: [vscode, execute, read, edit, search, web, browser, todo]
 user-invocable: true
 argument-hint: "Beskriv Python-oppgaven, hva du har prøvd, og hvor du sitter fast."
 ---
