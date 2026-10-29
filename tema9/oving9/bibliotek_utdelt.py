@@ -1,5 +1,6 @@
 class Bok:
     def __init__(self, tittel, forfatter, utgivelsesaar, antall_totalt=1):
+        # Konstruktører
         self.tittel = tittel
         self.forfatter = forfatter
         self.utgivelsesaar = utgivelsesaar
@@ -7,6 +8,7 @@ class Bok:
         self.antall_naa = antall_totalt
 
     def __str__(self):
+        # Utskrift til obkjektene
         if self.antall_naa > 0: status = "ledig" 
         else: status = "Ikke ledig"
 
@@ -24,6 +26,7 @@ class Bok:
 
 class Bibliotek:
     def __init__(self, boker=None):
+        #Lagar en tom liste
         self.boker = [] if boker is None else boker
 
     def legg_til_bok(self, bok):
@@ -65,7 +68,12 @@ def legg_til_bok_fra_input(bibliotek):
 
 
 def start_bibliotek():
-    bibliotek = Bibliotek()
+    #Pre-defined bøker fra utgitt kode.
+    bok1 = Bok("Starting out with Python, 6. utgave", "Tony Gaddis", 2023)
+    bok2 = Bok("Python for realfag, 3. utgave", "Finn Aakre Hugen og Marius Lysaker", 2022)
+    bok3 = Bok("Objektorientert programmering med Python", "Henrik Hillestad Løvold", 2025)
+    bibliotek = Bibliotek([bok1, bok2, bok3])
+    # Tom liste uten noen bøker -> Fjern bok1, bok2... ha objektet tom
 
     while True:
         print("\n1. Legg til bok")
